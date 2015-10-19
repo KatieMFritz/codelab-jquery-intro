@@ -22,6 +22,10 @@
         background-color: #2EB82E;
       }
 
+      td.o {
+        background-color: purple;
+      }
+
     </style>
 
   </head>
@@ -52,8 +56,14 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $('td').on('click', function(){
-          $(this).text('X');
-          $(this).addClass('x');
+          if (!$(this).hasClass('x') && !$(this).hasClass('o')) {
+            $(this).text('X');
+            $(this).addClass('x');
+          }
+          else if ($(this).hasClass('x')) {
+            $(this).text('O');
+            $(this).addClass('o');
+          }
       })
     </script>
 
