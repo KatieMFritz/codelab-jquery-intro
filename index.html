@@ -70,6 +70,11 @@
             $(this).removeClass('x o');
           }
       })
+
+      $('#reset-button').on('click', function (){
+        $('td').removeClass('x o');
+        $('td').text('');
+      })
     </script>
 
   </body>
