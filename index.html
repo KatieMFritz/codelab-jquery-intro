@@ -63,6 +63,11 @@
           else if ($(this).hasClass('x')) {
             $(this).text('O');
             $(this).addClass('o');
+            $(this).removeClass('x');
+          }
+          else if ($(this).hasClass('o')) {
+            $(this).text('');
+            $(this).removeClass('x o');
           }
       })
     </script>
