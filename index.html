@@ -57,23 +57,27 @@
     <script>
       $('td').on('click', function(){
           if (!$(this).hasClass('x') && !$(this).hasClass('o')) {
-            $(this).text('X');
-            $(this).addClass('x');
+            $(this)
+              .text('X')
+              .addClass('x')
           }
           else if ($(this).hasClass('x')) {
-            $(this).text('O');
-            $(this).addClass('o');
-            $(this).removeClass('x');
+            $(this)
+              .text('O')
+              .addClass('o')
+              .removeClass('x')
           }
           else if ($(this).hasClass('o')) {
-            $(this).text('');
-            $(this).removeClass('x o');
+            $(this)
+              .text('')
+              .removeClass('x o')
           }
       })
 
       $('#reset-button').on('click', function (){
-        $('td').removeClass('x o');
-        $('td').text('');
+        $('td')
+          .removeClass('x o')
+          .text('')
       })
     </script>
 
